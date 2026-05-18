@@ -45,7 +45,7 @@
         "description": "Maximum number of results (1-100, default: 20)",
         "default": 20,
         "prefill": 20,
-        "editor": "textfield"
+        "editor": "number"
       }
     },
     "required": []
