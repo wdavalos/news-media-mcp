@@ -6,20 +6,19 @@
     "tool": {
       "title": "Tool",
       "type": "string",
-      "description": "MCP tool to call: search_news, get_article, get_top_headlines",
+      "description": "MCP tool to call",
       "default": "search_news",
       "prefill": "search_news",
       "editor": "select",
       "enum": ["search_news", "get_article", "get_top_headlines"]
     },
     "params": {
-      "title": "Parameters",
-      "type": "object",
-      "description": "Tool-specific parameters",
-      "default": {},
-      "prefill": {},
-      "editor": "json",
-      "properties": {}
+      "title": "Params",
+      "type": "string",
+      "description": "Tool parameters as JSON string",
+      "default": "{}",
+      "prefill": "{}",
+      "editor": "textfield"
     }
   },
   "required": ["tool"]
