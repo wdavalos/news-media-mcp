@@ -1,0 +1,67 @@
+{
+  "title": "Input schema",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "tool": {
+      "title": "Tool",
+      "type": "string",
+      "description": "MCP tool to call: search_news, get_article, get_top_headlines",
+      "default": "search_news",
+      "prefill": "search_news",
+      "editor": "select",
+      "enum": ["search_news", "get_article", "get_top_headlines"]
+    },
+    "params": {
+      "title": "Parameters",
+      "type": "object",
+      "description": "Tool-specific parameters",
+      "default": {},
+      "prefill": {},
+      "editor": "object",
+      "properties": {
+        "query": {
+          "title": "Query",
+          "type": "string",
+          "description": "Search query for news articles",
+          "default": "",
+          "prefill": "",
+          "editor": "textfield"
+        },
+        "url": {
+          "title": "URL",
+          "type": "string",
+          "description": "Article URL from Google News",
+          "default": "",
+          "prefill": "",
+          "editor": "textfield"
+        },
+        "category": {
+          "title": "Category",
+          "type": "string",
+          "description": "News category: general, business, technology, science, health, sports, entertainment",
+          "default": "general",
+          "prefill": "general",
+          "editor": "textfield"
+        },
+        "location": {
+          "title": "Location",
+          "type": "string",
+          "description": "Geographic location (US, GB, DE, FR, CA, AU, etc.)",
+          "default": "US",
+          "prefill": "US",
+          "editor": "textfield"
+        },
+        "num_results": {
+          "title": "Number of Results",
+          "type": "integer",
+          "description": "Maximum number of results (1-100, default: 20)",
+          "default": 20,
+          "prefill": 20,
+          "editor": "textfield"
+        }
+      }
+    }
+  },
+  "required": ["tool"]
+}

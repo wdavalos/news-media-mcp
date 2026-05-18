@@ -1,0 +1,28 @@
+{
+  "name": "news-media-mcp",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Google News MCP for AI agents. Programmatic access to news articles, headlines, topics, and media coverage analysis.",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node src/main.js",
+    "test": "node src/main.js test"
+  },
+  "keywords": [
+    "apify",
+    "mcp",
+    "google-news",
+    "news",
+    "media",
+    "news-monitoring",
+    "press-releases"
+  ],
+  "dependencies": {
+    "apify": "^3.6.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "author": "Apify",
+  "license": "MIT"
+}

@@ -1,0 +1,57 @@
+{
+  "$schema": "https://apify.com/schemas/v1/actor.ide.json",
+  "actorSpecification": 1,
+  "name": "news-media-mcp",
+  "title": "News Media MCP",
+  "version": "1.0",
+  "description": "News MCP for AI agents. Programmatic access to Google News search, article content, and top headlines via public RSS feed (no auth required).",
+  "buildTag": "latest",
+  "usesStandbyMode": true,
+  "meta": {
+    "templateId": "ts-standby",
+    "generatedBy": "apify-cli"
+  },
+  "dockerfile": "../Dockerfile",
+  "webServerMcpPath": "/mcp",
+  "defaultRunOptions": {
+    "build": "latest",
+    "memoryMbytes": 1024,
+    "timeoutSecs": 3600
+  },
+  "input": {
+    "title": "Input schema",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+      "query": {
+        "title": "Query",
+        "type": "string",
+        "description": "Search query for news articles",
+        "default": "",
+        "prefill": "",
+        "editor": "textfield"
+      },
+      "location": {
+        "title": "Location",
+        "type": "string",
+        "description": "Geographic location (US, GB, DE, FR, etc.)",
+        "default": "US",
+        "prefill": "US",
+        "editor": "textfield"
+      },
+      "num_results": {
+        "title": "Number of Results",
+        "type": "integer",
+        "description": "Maximum number of results (1-100, default: 20)",
+        "default": 20,
+        "prefill": 20,
+        "editor": "textfield"
+      }
+    },
+    "required": []
+  },
+  "pricing": {
+    "model": "PAY_PER_EVENT"
+  },
+  "categories": ["MCP_SERVERS", "AI", "NEWS", "MEDIA"]
+}
