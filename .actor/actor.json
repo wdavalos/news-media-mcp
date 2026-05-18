@@ -29,7 +29,7 @@
         "description": "Search query for news articles",
         "default": "",
         "prefill": "",
-        "editor": "number"
+        "editor": "textfield"
       },
       "location": {
         "title": "Location",
@@ -37,7 +37,7 @@
         "description": "Geographic location (US, GB, DE, FR, etc.)",
         "default": "US",
         "prefill": "US",
-        "editor": "number"
+        "editor": "textfield"
       },
       "num_results": {
         "title": "Number of Results",
@@ -45,7 +45,7 @@
         "description": "Maximum number of results (1-100, default: 20)",
         "default": 20,
         "prefill": 20,
-        "editor": "number"
+        "editor": "textfield"
       }
     },
     "required": []
@@ -53,5 +53,10 @@
   "pricing": {
     "model": "PAY_PER_EVENT"
   },
-  "categories": ["MCP_SERVERS", "AI", "NEWS", "MEDIA"]
+  "categories": [
+    "MCP_SERVERS",
+    "AI",
+    "NEWS",
+    "MEDIA"
+  ]
 }
