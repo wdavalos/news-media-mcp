@@ -470,7 +470,7 @@ async function handleToolCall(tool, args) {
 
   const price = PPE_PRICES[tool];
   if (price) {
-    await Actor.charge(price, { eventName: tool });
+    await Actor.charge({ eventName: tool, count: 1 });
   }
 
   switch (tool) {
